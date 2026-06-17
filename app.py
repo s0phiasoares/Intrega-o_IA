@@ -30,17 +30,20 @@ def converter_para_gemini(historico):
 
 
 def gerar_resposta():
-    resposta = cliente.models.generate_content(
-        model=MODELO,
-        contents=converter_para_gemini(st.session_state.historico),
-        config=types.GenerateContentConfig(
-            system_instruction=INSTRUCAO_SISTEMA,
-            temperature=0.4,
+    try:
+        resposta = cliente.models.generate_content(
+            model=MODELO,
+            contents=converter_para_gemini(st.session_state.historico),
+            config=types.GenerateContentConfig(
+                system_instruction=INSTRUCAO_SISTEMA,
+                temperature=0.4,
+            )
         )
-    )
-
-
-    return resposta.text
+    
+    
+        return resposta.text
+        except:
+            return "Ocorreu um erro ao se comunicar com o Gemini, tente novamente mias tarde!"
 
 MODELO = "gemini-2.5-flash"
 
