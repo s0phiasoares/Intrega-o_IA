@@ -96,3 +96,6 @@ if entrada_usuario:
             "content":resposta_ia
         }
     )
+
+#chave_api = st.secrets.get("GEMINI_API_KEY")
+#st.title(f"Chave secreta:{chave_api}")
