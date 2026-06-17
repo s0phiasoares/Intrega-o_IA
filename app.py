@@ -42,7 +42,7 @@ def gerar_resposta():
     
     
         return resposta.text
-        except:
+    except Exception:
             return "Ocorreu um erro ao se comunicar com o Gemini, tente novamente mias tarde!"
 
 MODELO = "gemini-2.5-flash"
