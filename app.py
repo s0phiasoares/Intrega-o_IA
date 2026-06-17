@@ -52,7 +52,7 @@ Se faltar informação, faça 1 pergunta curta antes de responder.
 """
 
 st.set_page_config(page_title="Minions chatbot", page_icon="🍌")
-st.title("Chatbot com os minions 🪢🍌")
+st.title("Chatbot com os minions 🪢🟡")
 st.subheader("Para tu os Minions, askete qualquer coisa! Poopaye pergunta muito bobo, okay? Bananaaa! 🤪🍌") 
 
 chave_api = st.sidebar.text_input("Insira sua chave de API", type="password")
